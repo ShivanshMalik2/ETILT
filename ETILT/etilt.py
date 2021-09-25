@@ -10,6 +10,8 @@ while True:
     if x == 1:
 
         
+
+
         # Var's
         ClsClear = "clear"
         Etilt_ConsoleINPT = input("Etilt_Console>> ")
@@ -19,8 +21,14 @@ while True:
         DLSD = "download"
         ip = "checkip"
         ipurl = "http://ip-api.com/json/"
-
-
+        he = "help"
+        helpgui = """
+           Currently avaliable commands:
+           help
+           clear
+           checkip
+           tell-time
+                  """
 
         #time OPT
 
@@ -38,4 +46,7 @@ while True:
         if Etilt_ConsoleINPT == ip:
          response = requests.get(ipurl)
          print(response.json())
+
+        if Etilt_ConsoleINPT == he:
+            print(helpgui)
 
