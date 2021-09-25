@@ -40,7 +40,7 @@ while True:
 
         if Etilt_ConsoleINPT == ClsClear:
          subprocess.run("cls", shell=True) 
-         print("Elist Console was cleared at " + consoletime)
+         print("Etilt Console was cleared at " + consoletime)
 
 
         if Etilt_ConsoleINPT == ip:
