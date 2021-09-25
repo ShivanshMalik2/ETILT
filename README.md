@@ -1,6 +1,4 @@
-# ETILT
-My first REPL responsive coding language :)
+#ETILT
+My biggest python project till now
 
-We are still working on the project, Please do not spread hate lol.
-
-
+Type in "help" inside the CLI for more details
