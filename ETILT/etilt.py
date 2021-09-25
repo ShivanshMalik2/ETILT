@@ -1,3 +1,4 @@
+import subprocess 
 from datetime import datetime
 import requests
 import random
@@ -21,14 +22,16 @@ while True:
         he = "help"
         helpgui = """
            Currently avaliable commands:
-           help
-           clear
-           checkip
-           tell-time
-           Any math equation (eg. 60 + 9)
+           help: You just ran this command lol, Opens the help menu.
+           clear: clears the shell from commands and responses, Good to do for clean work.
+           checkip: Run this to get your IP, Geolocation and other details.
+           tell-time: Tells the time
+           randomnum: Generates a random number between 1 - 100
+           exit: Exits the ETILT Console
                   """
         rannum = "randomnum"
         secrecy = "secret"
+        ex = "exit"
 
         #time OPT
 
@@ -58,3 +61,7 @@ while True:
             for i in range(69):
              f.write("Never gonna give you up %d\r\n" % (i+1))
             f.close()
+
+        if Etilt_ConsoleINPT == ex:
+            print("Exiting ETILT Console...")
+            exit()
