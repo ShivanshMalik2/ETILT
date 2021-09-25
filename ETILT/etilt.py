@@ -1,6 +1,6 @@
-import subprocess 
 from datetime import datetime
 import requests
+import random
 
 #Console time get 
 #While & if loops for initiating
@@ -8,9 +8,6 @@ import requests
 while True:
     x = 1
     if x == 1:
-
-        
-
 
         # Var's
         ClsClear = "clear"
@@ -28,7 +25,10 @@ while True:
            clear
            checkip
            tell-time
+           Any math equation (eg. 60 + 9)
                   """
+        rannum = "randomnum"
+        secrecy = "secret"
 
         #time OPT
 
@@ -40,7 +40,7 @@ while True:
 
         if Etilt_ConsoleINPT == ClsClear:
          subprocess.run("cls", shell=True) 
-         print("Etilt Console was cleared at " + consoletime)
+         print("Elist Console was cleared at " + consoletime)
 
 
         if Etilt_ConsoleINPT == ip:
@@ -50,3 +50,11 @@ while True:
         if Etilt_ConsoleINPT == he:
             print(helpgui)
 
+        if Etilt_ConsoleINPT == rannum:
+         print("Random number between 1 - 100: ", random.randrange(1, 100))
+
+        if Etilt_ConsoleINPT == secrecy:
+            f= open("secret.txt","w+")
+            for i in range(69):
+             f.write("Never gonna give you up %d\r\n" % (i+1))
+            f.close()
