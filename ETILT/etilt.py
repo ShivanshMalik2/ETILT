@@ -22,16 +22,15 @@ while True:
         if Elit_ConsoleINPT == ClsClear:
          subprocess.run("cls", shell=True) 
          print("Elist Console was cleared at " + {consoletime})
-
-        if Elit_ConsoleINPT == "download":
+            
+            
+         if Elit_ConsoleINPT == "download":
          DownloadInput = input("Enter the URL you want to download from: ")
-         url = "https://github.com/someguy/brilliant/blob/master/somefile.txt"
-directory = getcwd()
-filename = directory + 'somefile.txt'
-r = requests.get(url)
+         if DownloadInput.endswith == ".txt":
+          r = requests.get(DownloadInput, allow_redirects=True)
+          open('DownloadInput', 'wb').write(r.content)
 
-f = open(filename,'w')
-f.write(r.content)
+
 
         
 
