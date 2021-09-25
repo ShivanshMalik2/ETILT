@@ -1,40 +1,41 @@
 import subprocess 
-from datetime import datetime                                                                  
+from datetime import datetime
 import requests
 
-now = datetime.now()
-
-consoletime = now.strftime("%H:%M:%S")
-
+#Console time get 
 #While & if loops for initiating
+
 while True:
     x = 1
     if x == 1:
 
-        Yourl = f"{Elit_ConsoleINPT}"
-
+        
         # Var's
         ClsClear = "clear"
-        Elit_ConsoleINPT = input("Etilt_Console>> ")
-        r = requests.get(url, allow_redirects=True)
+        Etilt_ConsoleINPT = input("Etilt_Console>> ")
+        TimeCheck = "tell-time"
+        now = datetime.now()
+        consoletime = now.strftime("%H:%M:%S") 
+        DLSD = "download"
+        ip = "checkip"
+        ipurl = "http://ip-api.com/json/"
+
+
+
+        #time OPT
+
+        if Etilt_ConsoleINPT == TimeCheck:
+            print(consoletime)
+         
 
         #ClearOutTerminal
-        if Elit_ConsoleINPT == ClsClear:
+
+        if Etilt_ConsoleINPT == ClsClear:
          subprocess.run("cls", shell=True) 
-         print("Elist Console was cleared at " + {consoletime})
-            
-            
-         if Elit_ConsoleINPT == "download":
-         DownloadInput = input("Enter the URL you want to download from: ")
-         if DownloadInput.endswith == ".txt":
-          r = requests.get(DownloadInput, allow_redirects=True)
-          open('DownloadInput', 'wb').write(r.content)
+         print("Elist Console was cleared at " + consoletime)
 
 
+        if Etilt_ConsoleINPT == ip:
+         response = requests.get(ipurl)
+         print(response.json())
 
-        
-
- 
-
-
-        
